@@ -16,7 +16,7 @@ int main()
         //child processs
         printf("Child process :This is the child process \n");
         printf("Child process :child process exceuted with pid %d\n",getpid());
-        printf("Child process :parent process exceuted with pid %d\n",getpid());
+        printf("Child process :parent process exceuted with pid %d\n",getppid());
         _exit(0);
     }
     else{

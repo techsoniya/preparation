@@ -14,7 +14,7 @@ int main()
     else if(pid==0)
     {
         printf("child process executed with pid : %d \n",getpid());
-        printf("parent process executed with pid : %d \n",getpid());
+        printf("parent process executed with pid : %d \n",getppid());
         execlp("/bin/ls","ls",NULL);
         printf("This will not be printed if exec is executed");
         return 0;
@@ -23,7 +23,7 @@ int main()
     else
     {
         printf("parent process executed with pid : %d \n ",getpid());
-        printf("child process executed with pid : %d \n",getpid());
+        printf("child process executed with pid : %d \n",pid);
         wait(&status);
         printf("Child process executed with status : %d \n",status);
         return 0;
